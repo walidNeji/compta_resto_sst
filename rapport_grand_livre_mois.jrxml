@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rapport_grand_livre_mois" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c8c6b76-86ac-4cf1-9789-d4199f81dd0f">
+	<property name="ireport.scriptlethandling" value="2"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="title" class="java.lang.String"/>
+	<parameter name="date_current" class="java.lang.String"/>
+	<parameter name="Date_Du" class="java.lang.String"/>
+	<parameter name="Date_Au" class="java.lang.String"/>
+	<field name="DATE" class="java.lang.String"/>
+	<field name="VD" class="java.lang.String"/>
+	<field name="VIND" class="java.lang.String"/>
+	<field name="DEP D" class="java.lang.String"/>
+	<field name="DEP IND" class="java.lang.String"/>
+	<field name="RECETTE" class="java.lang.String"/>
+	<field name="TOTAL VENTE" class="java.lang.String"/>
+	<field name="TOTAL DEP" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="182" y="50" width="212" height="51" uuid="f0d065ec-5d24-4888-813a-6b1d2d4e5ea2"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="162" y="0" width="246" height="50" uuid="033c6536-3d1c-4f5d-b75e-b23a23451710"/>
+				<textElement textAlignment="Center">
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[La Tour Royale]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="162" height="91" uuid="34a8752b-6b7a-467f-b836-d7bcca93b707"/>
+				<text><![CDATA[
+Adresse 36 Ibn Khaldoun Tunis
+E-mail: latourRoyale@gmail.com
+Tél : 71 256 517
+Fax : 71 345 241
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="bc349416-7163-492c-8451-0a50d1460a77"/>
+				<textFieldExpression><![CDATA[$P{date_current}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="394" y="51" width="38" height="24" uuid="db826e79-9331-4254-a624-ccaf8d4b52d6"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Du :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="75" width="38" height="24" uuid="fc13002d-67e5-40b8-8e10-714a323e71a8"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Au :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="432" y="53" width="100" height="24" uuid="4182d69e-ef76-48a9-8adf-8daf976251a5"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Date_Du}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="77" width="100" height="24" uuid="0c592210-72a6-4712-9e48-d0b9cf452dd7"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Date_Au}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="6" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="65" height="20" backcolor="#CCCCCC" uuid="2e7c96ab-ff13-4322-8b08-bb1edc340670"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="0" width="69" height="20" backcolor="#CCCCFF" uuid="5e062af0-a1ad-4c91-b5ff-b9e950112785"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[VD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="0" width="59" height="20" backcolor="#CCCCFF" uuid="fd63ec3f-3782-4efa-aa90-3bb6657a051e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[VIND]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="0" width="64" height="20" backcolor="#CCCCFF" uuid="995497f0-ae87-4d77-8168-bf45ae523e36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DEP IND]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="0" width="69" height="20" backcolor="#CCCCFF" uuid="7e66b6c3-38e8-444a-9b28-f1e578f6f0c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DEP D]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="0" width="85" height="20" backcolor="#CCCCFF" uuid="30aa5d00-330c-4b33-96f1-a983f55241fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[RECETTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="0" width="76" height="20" uuid="fba41a4c-0a35-4c3c-a2cf-9be93772efe3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[TOT DEP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="0" width="68" height="20" uuid="ecba1d40-e8e7-4880-aff6-9c9f4a2401a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[TOT VENTE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="65" height="20" uuid="2e15d34c-e721-41a5-b71d-b870d05747e7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="0" width="79" height="20" uuid="e17ed0b7-717e-407c-a1d8-0c1ce89aa852"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{RECETTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="0" width="64" height="20" uuid="c3bfc52f-3c76-4db7-a14b-313bcad323bc"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DEP IND}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="394" y="0" width="76" height="20" uuid="39702c92-c4f9-4bb6-91eb-e9950c901dbd"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL DEP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="0" width="68" height="20" uuid="5ffd27bd-3975-4cc8-ba6a-6c1144df6c52"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL VENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="0" width="69" height="20" uuid="3938e5aa-2dbd-4623-8506-c1fe19c9d4dc"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="257" y="0" width="69" height="20" uuid="add7c12d-ad6b-4001-a44d-60636c0a9321"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DEP D}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="0" width="59" height="20" uuid="8974450b-80e8-4bf0-9fb3-a8500c7f4c2c"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VIND}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="32" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="432" y="11" width="80" height="20" uuid="7a14e39e-75a3-4c96-894d-288b5f41616b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="512" y="11" width="40" height="20" uuid="c418718e-14f3-4447-8cf3-954d4a8ba822"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

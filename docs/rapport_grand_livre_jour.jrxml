@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rapport_grand_livre_jour" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c8c6b76-86ac-4cf1-9789-d4199f81dd0f">
+	<property name="ireport.scriptlethandling" value="2"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="title" class="java.lang.String"/>
+	<parameter name="TOTAL" class="java.lang.String"/>
+	<parameter name="date_current" class="java.lang.String"/>
+	<parameter name="TOTAL_VENTE" class="java.lang.String"/>
+	<parameter name="TOTAL_DEP" class="java.lang.String"/>
+	<field name="LIBELLE" class="java.lang.String"/>
+	<field name="VENTE DIRECTE" class="java.lang.String"/>
+	<field name="VENTE INDIRECTE" class="java.lang.String"/>
+	<field name="DEPENSE DIRECTE" class="java.lang.String"/>
+	<field name="DEPENSE INDIRECTE" class="java.lang.String"/>
+	<field name="RECETTE" class="java.lang.String"/>
+	<field name="FAMILLE" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<textField>
+				<reportElement x="211" y="52" width="207" height="39" uuid="f0d065ec-5d24-4888-813a-6b1d2d4e5ea2"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="162" height="91" uuid="249665f5-6b35-4292-a151-1a504b8db55e"/>
+				<text><![CDATA[
+Adresse 36 Ibn Khaldoun Tunis
+E-mail: latourRoyale@gmail.com
+Tél : 71 256 517
+Fax : 71 345 241
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="0" width="293" height="52" uuid="3a72436e-5963-4310-b146-b1413e915f74"/>
+				<textElement textAlignment="Center">
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[La Tour Royale]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="b36e9538-a9b1-4acd-8c15-88d0c954fcb9"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{date_current}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="3" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="8" width="100" height="20" uuid="2e7c96ab-ff13-4322-8b08-bb1edc340670"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[LIBELLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="8" width="71" height="20" uuid="5e062af0-a1ad-4c91-b5ff-b9e950112785"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[VENTE IND]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="8" width="79" height="20" uuid="fd63ec3f-3782-4efa-aa90-3bb6657a051e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[VENTE DIRECTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="8" width="74" height="20" uuid="995497f0-ae87-4d77-8168-bf45ae523e36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DEP IND]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="418" y="8" width="79" height="20" uuid="7e66b6c3-38e8-444a-9b28-f1e578f6f0c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DEP DIRECTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="8" width="58" height="20" uuid="30aa5d00-330c-4b33-96f1-a983f55241fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[RECETTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="8" width="89" height="20" uuid="cbf80286-6bcd-48a3-932f-84c5dd6afed5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[FAMILLE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="497" y="0" width="58" height="20" uuid="e17ed0b7-717e-407c-a1d8-0c1ce89aa852"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{RECETTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="0" width="79" height="20" uuid="8974450b-80e8-4bf0-9fb3-a8500c7f4c2c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{VENTE INDIRECTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="344" y="0" width="74" height="20" uuid="c3bfc52f-3c76-4db7-a14b-313bcad323bc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DEPENSE INDIRECTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="105" y="0" width="89" height="20" uuid="043f64fa-c08d-48db-9280-97b452b1bb92"/>
+				<textFieldExpression><![CDATA[$F{FAMILLE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="0" width="95" height="20" uuid="84fb3d84-ce0e-457f-b70e-ef058d39d095"/>
+				<textFieldExpression><![CDATA[$F{LIBELLE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="0" width="71" height="20" uuid="3938e5aa-2dbd-4623-8506-c1fe19c9d4dc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{VENTE DIRECTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="0" width="79" height="20" uuid="add7c12d-ad6b-4001-a44d-60636c0a9321"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DEPENSE DIRECTE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="76" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="56" width="100" height="20" uuid="3939adb6-2a83-4be2-a7f0-f81580bd62ca"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$P{TOTAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="355" y="56" width="100" height="20" uuid="978614d9-22a7-4b42-809f-c235a072e053"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[MONTANT TOTAL = ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="37" width="100" height="20" uuid="828263a7-8037-4fc6-9528-9d6e4ddb5f8b"/>
+				<text><![CDATA[TOTAL DEPENSE  =]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="17" width="100" height="20" uuid="015255ac-69b5-40ff-bf78-3fcb2f86513d"/>
+				<text><![CDATA[ TOTAL VENTE     =]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="17" width="100" height="20" uuid="f7d2e3af-0fce-4d7c-990f-3e2283ea42a5"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$P{TOTAL_VENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="36" width="100" height="20" uuid="fb5e3f37-6944-4c0c-8f80-efd2c3b0ea16"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$P{TOTAL_DEP}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="418" y="5" width="80" height="20" uuid="5ba25d8d-673f-450b-87e5-4e1487beb73b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="498" y="5" width="40" height="20" uuid="340f3c68-7c46-4c20-8aff-e9a00ffb0b03"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="14" splitType="Stretch"/>
+	</summary>
+</jasperReport>
