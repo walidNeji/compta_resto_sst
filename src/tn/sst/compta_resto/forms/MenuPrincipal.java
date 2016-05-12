@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -90,8 +91,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
             jTabbedPane1.setEnabledAt(3, false);
             jTabbedPane1.setSelectedIndex(4);
         }
-        this.setExtendedState(MenuPrincipal.MAXIMIZED_BOTH);
+        ButtonGroup bg = new ButtonGroup();
+        bg.add(jRadioButton1);
+        bg.add(jRadioButton2);
 
+        this.setExtendedState(MenuPrincipal.MAXIMIZED_BOTH);
 
     }
 
@@ -225,6 +229,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         histo_vente_total = new javax.swing.JLabel();
         jButton15 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        Date_Picker_Stat_To = new org.jdesktop.swingx.JXDatePicker();
+        Date_Picker_Stat_For = new org.jdesktop.swingx.JXDatePicker();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
+        jButton16 = new javax.swing.JButton();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        table_stat = new org.jdesktop.swingx.JXTable();
+        jLabel32 = new javax.swing.JLabel();
+        stat_label_total = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -398,7 +417,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             jXPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jXPanel2Layout.createSequentialGroup()
                 .addGap(4, 4, 4)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 548, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(button_delete_articles, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -433,7 +452,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(275, Short.MAX_VALUE))
+                .addContainerGap(298, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jXPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jSeparator1))
@@ -593,10 +612,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(358, Short.MAX_VALUE))
+                .addContainerGap(381, Short.MAX_VALUE))
             .addComponent(jSeparator4)
             .addGroup(jXPanel3Layout.createSequentialGroup()
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 568, Short.MAX_VALUE)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 591, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(depense_desactiver, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -714,7 +733,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             .addGroup(jXPanel4Layout.createSequentialGroup()
                 .addGroup(jXPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jXPanel4Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 595, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
                     .addGroup(jXPanel4Layout.createSequentialGroup()
                         .addGap(43, 43, 43)
@@ -954,7 +973,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addComponent(compta_grandLivre_Recherche, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
                     .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 573, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("GRAND LIVRE PAR MOIS", jPanel3);
@@ -1047,7 +1066,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
                 .addGap(8, 8, 8))
         );
 
@@ -1114,7 +1133,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addGroup(jXPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jXPanel1Layout.setVerticalGroup(
             jXPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1139,7 +1158,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE))
+                .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("HISTORIQUE DEPENSES", jXPanel1);
@@ -1203,7 +1222,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         .addComponent(jLabel20)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(histo_vente_total, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(139, Short.MAX_VALUE))))
+                        .addContainerGap())))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1231,6 +1250,141 @@ public class MenuPrincipal extends javax.swing.JFrame {
         );
 
         jTabbedPane2.addTab("HISTORIQUE VENTES", jPanel4);
+
+        jPanel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jPanel5.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jPanel5ComponentShown(evt);
+            }
+        });
+
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "catégorie de recherche :", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+
+        jRadioButton1.setText("Dépense ");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton2.setText("Vente ");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+
+        jLabel30.setText("Au (j-1) :");
+
+        jLabel29.setText("Du  :");
+
+        jLabel31.setText("Produit :");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel30)
+                    .addComponent(jLabel29))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Date_Picker_Stat_To, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                    .addComponent(Date_Picker_Stat_For, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jRadioButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                    .addComponent(jRadioButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Date_Picker_Stat_To, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Date_Picker_Stat_For, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jRadioButton2))
+                    .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27))))
+        );
+
+        jButton16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton16.setText("Afficher");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        table_stat.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "DATE", "PRODUIT", "MONTANT"
+            }
+        ));
+        jScrollPane9.setViewportView(table_stat);
+
+        jLabel32.setText("Montant total de la recherche :");
+
+        stat_label_total.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 97, Short.MAX_VALUE))
+                    .addComponent(jScrollPane9))
+                .addContainerGap())
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(220, 220, 220)
+                .addComponent(jLabel32)
+                .addGap(18, 18, 18)
+                .addComponent(stat_label_total, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(stat_label_total, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(77, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("STATISTIQUE", jPanel5);
 
         javax.swing.GroupLayout jXPanel6Layout = new javax.swing.GroupLayout(jXPanel6);
         jXPanel6.setLayout(jXPanel6Layout);
@@ -1577,7 +1731,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, stringArray,
                         stringArray[0]);
 
-
                 detailsVente.setClePdt(article);
                 detailsVente.setQuantite(1);
                 detailsVente.setPrixVente(Float.parseFloat(solde));
@@ -1632,7 +1785,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
             ((DefaultTableModel) panier_vente.getModel()).setValueAt(montant_vente_total_directe + montant_vente_total_indirecte + "", panier_vente.getRowCount() - 1, panier_vente.getColumnCount() - 1);
             ((DefaultTableModel) panier_vente.getModel()).removeRow(pos);
-
 
         }
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -1869,7 +2021,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     }
                 }
 
-
             }
         }
     }//GEN-LAST:event_compta_grandLivre_RechercheActionPerformed
@@ -2014,7 +2165,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
 
-
             DefaultTableModel de = (DefaultTableModel) table_GL.getModel();
             JRTableModelDataSource datasource = new JRTableModelDataSource(de);
             String reportSource = "./rapport_grand_livre_mois.jrxml";
@@ -2027,7 +2177,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
             params.put("Date_Au", dateFormat.format(jXDatePicker2.getDate()));
             JasperPrint jp = JasperFillManager.fillReport(jr, params, datasource);
             JasperViewer.viewReport(jp, false);
-
 
         } catch (JRException ex) {
             Logger.getLogger(MenuPrincipal.class
@@ -2053,7 +2202,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
             params.put("TOTAL_DEP", decimalFormat.format(tot_dep) + " Millimes");
             JasperPrint jp = JasperFillManager.fillReport(jr, params, datasource);
             JasperViewer.viewReport(jp, false);
-
 
         } catch (JRException ex) {
             Logger.getLogger(MenuPrincipal.class
@@ -2112,7 +2260,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "ERREUR AU NIVEAU DE LA SUPPRESION !");
             }
 
-
         }
     }//GEN-LAST:event_jButton14ActionPerformed
 
@@ -2160,8 +2307,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        
-          try {
+
+        try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -2194,7 +2341,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
-             try {
+        try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -2224,6 +2371,66 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jPanel5ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel5ComponentShown
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jPanel5ComponentShown
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+        if (jRadioButton1.isSelected()) {
+            jComboBox1.removeAllItems();
+            tn.sst.compta_resto.dao.FichDepensesJpaController fcjc = new tn.sst.compta_resto.dao.FichDepensesJpaController();
+
+            for (tn.sst.compta_resto.pojos.FichDepenses fichClient : fcjc.findAll()) {
+                jComboBox1.addItem(fichClient.getLibelle());
+            }
+        }
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+        if (jRadioButton2.isSelected()) {
+            jComboBox1.removeAllItems();
+
+            tn.sst.compta_resto.dao.FichProduitJpaController fcjc = new tn.sst.compta_resto.dao.FichProduitJpaController();
+            List<tn.sst.compta_resto.pojos.FichProduit> clients = fcjc.findAll();
+
+            for (tn.sst.compta_resto.pojos.FichProduit fichClient : clients) {
+                jComboBox1.addItem(fichClient.getLibelle());
+            }
+        }
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        float total = 0;
+        while (table_stat.getRowCount() > 0) {
+            ((DefaultTableModel) table_stat.getModel()).removeRow(0);
+        }
+
+        if (jRadioButton1.isSelected()) {
+            tn.sst.compta_resto.dao.FichRecetteDepJpaController fcjc = new tn.sst.compta_resto.dao.FichRecetteDepJpaController();
+            List<FichRecetteDep> deps = fcjc.findBetweenTwoDateAndDep(Date_Picker_Stat_To.getDate(), Date_Picker_Stat_For.getDate(), jComboBox1.getSelectedItem().toString());
+            for (FichRecetteDep dep : deps) {
+                total += dep.getMontant();
+                Object[] obj = new Object[]{dateFormat.format(dep.getDate()), dep.getIdDep().getLibelle(), dep.getMontant()};
+                ((DefaultTableModel) table_stat.getModel()).insertRow(table_stat.getRowCount(), obj);
+            }
+        } else if (jRadioButton2.isSelected()) {
+            tn.sst.compta_resto.dao.FichDetailsVenteJpaController fcjc = new tn.sst.compta_resto.dao.FichDetailsVenteJpaController();
+            List<FichDetailsVente> deps = fcjc.findBetweentwoDateAndProduit(Date_Picker_Stat_To.getDate(), Date_Picker_Stat_For.getDate(), jComboBox1.getSelectedItem().toString());
+            for (FichDetailsVente dep : deps) {
+                total += dep.getCleFichVente().getMontantVente();
+                Object[] obj = new Object[]{dateFormat.format(dep.getCleFichVente().getDateVente()), dep.getClePdt().getLibelle(), dep.getCleFichVente().getMontantVente()};
+                ((DefaultTableModel) table_stat.getModel()).insertRow(table_stat.getRowCount(), obj);
+            }
+        }
+        DecimalFormat decimalFormat = new DecimalFormat("###,###.###");
+        stat_label_total.setText(decimalFormat.format((float) (total / 1000)) + " DT");
+    }//GEN-LAST:event_jButton16ActionPerformed
 
     // METHODS CLASS
     public void articlesAfficheDetails() {
@@ -2267,7 +2474,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
             Object[] obj = new Object[]{produit.getLibelle(), produit.getClefamille().getLibelle()};
             ((DefaultTableModel) table_article.getModel()).insertRow(table_article.getRowCount(), obj);
         }
-
 
     }
 
@@ -2329,7 +2535,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     public void initInterfaceDepense() {
 
-
         depense_names.removeAllItems();
         depenses_famille.removeAllItems();
 //        initComboDepense();
@@ -2381,6 +2586,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private org.jdesktop.swingx.JXDatePicker Date_Picker_Stat_For;
+    private org.jdesktop.swingx.JXDatePicker Date_Picker_Stat_To;
     private org.jdesktop.swingx.JXTable GL_JOUR;
     private org.jdesktop.swingx.JXDatePicker GL_JOUR_DATE;
     private javax.swing.JLabel GL_JOUR_RECETTE;
@@ -2418,6 +2625,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2426,6 +2634,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2447,7 +2656,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -2463,6 +2676,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -2471,6 +2688,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -2492,11 +2710,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JTable panier_vente;
     private javax.swing.JComboBox recette_depense;
     private javax.swing.JComboBox recette_famille;
+    private javax.swing.JLabel stat_label_total;
     private javax.swing.JTable table_GL;
     private org.jdesktop.swingx.JXTable table_article;
     private org.jdesktop.swingx.JXTable table_depense;
     private org.jdesktop.swingx.JXTable table_histo_dep;
     private org.jdesktop.swingx.JXTable table_histo_vente;
+    private org.jdesktop.swingx.JXTable table_stat;
     private javax.swing.JComboBox ventes_article;
     private javax.swing.JComboBox ventes_famille;
     // End of variables declaration//GEN-END:variables

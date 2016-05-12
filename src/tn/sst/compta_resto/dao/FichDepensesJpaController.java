@@ -232,7 +232,7 @@ public class FichDepensesJpaController implements Serializable {
         return getEntityManager().createQuery("select p from FichDepenses p where p.etat = :e and p.idFamilleDep = :f order by p.libelle asc").setParameter("e", 'A').setParameter("f", dep).getResultList();
     }
     
-    
+   
     
     
 }

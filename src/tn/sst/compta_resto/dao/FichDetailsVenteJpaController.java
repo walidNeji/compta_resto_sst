@@ -11,13 +11,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.TemporalType;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import tn.sst.compta_resto.dao.exceptions.NonexistentEntityException;
+import tn.sst.compta_resto.objects.StatObject;
 import tn.sst.compta_resto.pojos.FichDetailsVente;
 import tn.sst.compta_resto.pojos.FichVente;
 import tn.sst.compta_resto.pojos.FichProduit;
-import tn.sst.compta_resto.pojos.FichRecetteDep;
 import tn.sst.grossiste.dto.emf.BaseDAO;
 
 /**
@@ -205,5 +206,25 @@ public class FichDetailsVenteJpaController implements Serializable {
             return ffs.get(0);
         }
         return null;
+    }
+
+    public List<StatObject> findStatVente(Date debut, Date fin) {
+        return getEntityManager().createNativeQuery("select p.libelle , sum(v.quantite)  , sum (v.prix_vente)"
+                + "from fich_details_vente as v , fich_produit as p, fich_vente as fv "
+                + " where p.clepdt = v.cle_pdt and v.cle_fich_vente = fv.clevente "
+                + "and fv.date_vente between '" + debut + "' and '" + fin + "' "
+                + "group by p.libelle"
+                + "order by sum(v.quantite) desc ", StatObject.class).getResultList();
+    }
+    
+       
+     public List<FichDetailsVente> findBetweentwoDateAndProduit(Date deb , Date fin , String produit){
+        
+       return getEntityManager()
+                .createQuery("SELECT R FROM FichDetailsVente R WHERE (R.clePdt.libelle like :t) AND (R.cleFichVente.dateVente between :d and :f)  ")
+                .setParameter("d", deb, TemporalType.DATE)
+                .setParameter("f", fin, TemporalType.DATE)
+                .setParameter("t",  produit + "%").getResultList();
+        
     }
 }

@@ -188,6 +188,15 @@ public class FichRecetteDepJpaController implements Serializable {
                 .setParameter("t", type + "%").getResultList();
     }
     
+     public List<FichRecetteDep> findBetweenTwoDateAndDep(Date deb, Date fin, String dep) {
+        
+        return getEntityManager()
+                .createQuery("SELECT R FROM FichRecetteDep R WHERE (R.idDep.libelle like :t) AND (R.date between :d and :f)  ")
+                .setParameter("d", deb, TemporalType.DATE)
+                .setParameter("f", fin, TemporalType.DATE)
+                .setParameter("t", dep + "%").getResultList();
+    }
+    
     public FichRecetteDep findByLibAndTypeAndDate(String lib, String type, Date d, float mnt) {
         List<FichRecetteDep> ffs = getEntityManager().createQuery("SELECT D FROM FichRecetteDep D "
                 + "WHERE D.idDep.libelle = :lib AND  D.typeDep = :f AND  D.montant = :m AND  D.date= :d  ")

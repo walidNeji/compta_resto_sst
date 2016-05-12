@@ -197,4 +197,5 @@ public class FichVenteJpaController implements Serializable {
                 .setParameter("t",  type + "%").getResultList();
         
     }
+ 
 }
